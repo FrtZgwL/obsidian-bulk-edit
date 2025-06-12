@@ -2,7 +2,7 @@ This small script makes it easy for you to bulk edit the metadata of files in a 
 
 # How to use it
 
-Consider this example from `main.py`:
+Consider this example from `example.py`:
 
 ```python3
 if __name__ == "__main__":

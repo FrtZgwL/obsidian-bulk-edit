@@ -1,10 +1,10 @@
 ---
 type: note
 authors:
-- "cedric"
-- "The Universe"
-- "Keychron"
-created: "2024-10-17"
+- alice
+- cedric
+- bob
+created: '2024-10-17'
 ---
 # Hello World!
 
