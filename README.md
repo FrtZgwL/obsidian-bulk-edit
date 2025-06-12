@@ -2,7 +2,7 @@ This small script makes it easy for you to bulk edit the metadata of files in a 
 
 # How to use it
 
-Consider this example from `example.py`:
+Consider `example.py`:
 
 ```python3
 if __name__ == "__main__":
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     my_vault.make_change(remove_cedrics_traces)
 ```
 
-I first create a `Vault` object using the path to my vault (backup your vault before you do this!). I then use this `Vault` object to call the function `remove_cedrics_traces`.
+Here, I first create a `Vault` object using the path to my vault (backup your vault before you do this!). I then use this `Vault` object to call the function `remove_cedrics_traces`.
 
 The code of this function is:
 
@@ -23,8 +23,8 @@ def remove_cedrics_traces(frontmatter, content):
     return (frontmatter, content)
 ```
 
-The function takes a frontmatter and content as an argument and returns a tuple of a frontmatter and content. The frontmatter is a dictionary, the content a list of strings. In this function I specify the change that I want to make to an individual file. When I call `make_change` the `Vault` object will execute this change for each file in the vault.
+`make_change` expects you to give it a function that describes the change. This function has to take a frontmatter and content as it's arguments and it has to return a tuple of a frontmatter and content. The frontmatter is a dictionary, the content a list of strings. When I call `make_change` the `Vault` object will execute this change for each file in the vault.
 
-You can alternatively call `preview_change`. This won't change the files. Instead it will print the frontmatter and content that it would give the files to the console.
+You can alternatively call `preview_change`. This won't change the files. Instead it will print a preview of the changes to the console.
 
 Now you can define your own function, pass it to `make_change` and bulk edit your vault in any way you see fit! :smile:
